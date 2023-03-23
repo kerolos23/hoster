@@ -1,0 +1,70 @@
+@use "../helper/var" as *;
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5em;
+    .hamburger{
+        display: none;
+    }
+    .logo{
+        svg{
+            width: 7.5625em;
+            height: 2.5em;
+        }
+    }
+    nav{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        width: 18em;
+        gap: 2em;
+        a{
+            text-decoration: none;
+            color: $color;
+            transition: .5s ease;
+            -webkit-transition: .5s ease;
+            -moz-transition: .5s ease;
+            -ms-transition: .5s ease;
+            -o-transition: .5s ease;
+            &:hover{
+                color: $hover-color;
+            }
+        }
+    }
+    .sign{
+        display: flex;
+        height: 100%;
+        width: 15em;
+        align-items: center;
+        justify-content:center;
+        gap: 1.7em;
+        button{
+            height: 3em;
+            cursor: pointer;
+            border: none;
+            font-size: 1.1em;
+            transition: 1s ease;
+            -webkit-transition: 1s ease;
+            -moz-transition: 1s ease;
+            -ms-transition: 1s ease;
+            -o-transition: 1s ease;
+        }
+        button:nth-child(1){
+            background-color: transparent;
+            &:hover{
+                color: $hover-color;
+            }
+        }
+        button:nth-child(2){
+            color: #fff;
+            background: $buttons-color;
+            border-radius: 0.9em;
+            padding: 1em;
+            font-weight: 700;
+            &:hover{
+                background-color: $buttons-hover;
+            }
+        }
+    }
+}

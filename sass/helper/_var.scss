@@ -1,0 +1,14 @@
+$color: #000;
+$hover-color: #5f5e5e;
+$buttons-color: #039BE5;
+$buttons-hover: #038cd1;
+%buttons{
+    border: none;
+    outline: none;
+    height: 3em;
+    border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+}

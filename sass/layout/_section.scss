@@ -1,0 +1,124 @@
+@use "../helper/var" as *;
+section{
+    display: flex;
+    padding-top: 2em;
+    max-width: 1366px;
+    margin: 0 auto;
+        .info{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding-left: 6em;
+            h2{
+                font-family: 'Playfair Display', serif;
+                font-size: 3.8em;
+                font-weight: 900;
+                margin-bottom: 0.2em;
+            }
+            p{
+                font-size: 1.2em;
+                font-weight: 400;
+            }
+            form{
+                height: 4em;
+                display: flex;
+                gap: 1em;
+                align-items: center;
+                input:nth-child(1){
+                    @extend %buttons;
+                    background-color: #EEEEEE;
+                    padding-left: 1em;
+                    width: 20em;
+                }
+                input:nth-child(2){
+                    @extend %buttons;
+                    padding: 1em;
+                    font-weight: 700;
+                    color: #fff;
+                    background: $buttons-color;
+                    transition: 1s ease;
+                    -webkit-transition: 1s ease;
+                    -moz-transition: 1s ease;
+                    -ms-transition: 1s ease;
+                    -o-transition: 1s ease;
+                    &:hover{
+                        background-color: $buttons-hover;
+                    }
+                }
+            }
+            .feature{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5em;
+                    font-size: 1.1em;
+                    p{
+                        font-weight: 600;
+                    }
+            }
+        }
+        .image{
+            display: flex;
+            width: 50%;
+            height: 28em;
+            position: relative;
+            justify-content: center;
+            padding-top: 1em;
+            svg{
+                width: 24.1875em;
+                height: 27.6875em;
+                position: absolute;
+            }
+            svg:nth-child(1){
+                transform: rotate(-30deg);
+                -webkit-transform: rotate(-30deg);
+                -moz-transform: rotate(-30deg);
+                -ms-transform: rotate(-30deg);
+                -o-transform: rotate(-30deg);
+            }
+            svg:nth-child(2){
+                transform: rotate(-20deg);
+                -webkit-transform: rotate(-20deg);
+                -moz-transform: rotate(-20deg);
+                -ms-transform: rotate(-20deg);
+                -o-transform: rotate(-20deg);
+            }
+            svg:nth-child(3){
+                transform: rotate(-10deg);
+                -webkit-transform: rotate(-10deg);
+                -moz-transform: rotate(-10deg);
+                -ms-transform: rotate(-10deg);
+                -o-transform: rotate(-10deg);
+            }
+            img{
+                position: absolute;
+                width: 24.1875em;
+                height: 27.6875em;
+            }
+        }
+    }
+footer{
+    display: flex;
+    max-width: 1366px;
+    margin: 0 auto;
+    margin-top: 1em;
+    .links{
+        display: flex;
+        gap: 1em;
+        padding-left: 6em;
+        a{
+            text-decoration: none;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: $hover-color;
+            transition: .5s ease;
+            -webkit-transition: .5s ease;
+            -moz-transition: .5s ease;
+            -ms-transition: .5s ease;
+            -o-transition: .5s ease;
+            &:hover{
+                color: $color;
+            }
+        }
+    }
+}

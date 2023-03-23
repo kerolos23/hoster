@@ -1,0 +1,131 @@
+/// media mixin for small dvcs and tablets 
+@mixin media($body-font){
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-size: $body-font;
+    }
+    header{
+        justify-content: unset;
+        padding-left: 5em;
+        position: relative;
+        overflow: hidden;
+        nav{
+            height: 100%;
+            width: 21em;
+            flex-direction: column;
+            position: fixed;
+            right: 0;
+            top: -200em;
+            background: #efefef;
+            z-index: 998;
+            padding-top: 7em;
+            transition: .5s ease;
+            -webkit-transition: .5s ease;
+            -moz-transition: .5s ease;
+            -ms-transition: .5s ease;
+            -o-transition: .5s ease;
+            a{
+                font-size: 2em;
+            }
+            .sign{
+                flex-direction: column;
+                margin-top: 20px;
+                height: unset;
+            }
+        }
+        .open{
+            top: 0em;
+        }
+        .hamburger{
+            display: flex;
+            position: absolute;
+            right: 3em;
+            top: 2em;
+            width: 3em;
+            height: 2.3em;
+            border: none;
+            align-items: center;
+            padding: 0;
+            flex-direction: column;
+            background-color: transparent;
+            z-index: 999;
+        }
+        .bar1, .bar2, .bar3 {
+            display: flex;
+            width: 100%;
+            height: 0.3em;
+            background: #020202;
+            padding: 0;
+            margin: 0;
+            transition: .7s ease;
+        }
+        .bar1, .bar2 {
+            margin-bottom: 20%;
+        }
+        .rotate1, .rotate2 {
+            display: flex;
+            width: 100%;
+            height: 0.3em;
+            background: #222;
+            padding: 0;
+            margin: 0;
+            transition: .7s ease;
+        }
+        .rotate1{
+            transform: rotate(45deg);
+        }
+        .rotate2 {
+            position: absolute       ;
+            transform: rotate(-45deg);
+        }
+        .opacity {
+            opacity: 0;
+        }
+    }
+    section{
+        width: 100%;
+        max-width: unset;
+        overflow: hidden;
+        flex-direction: column;
+        .image{
+            width: 100%;
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-left: 2em;
+            padding-right: 2em;
+            h2{
+                font-size: 2.8em;
+                margin-bottom: 0.5em;
+            }
+            p{
+                font-size: 1em;
+                margin-bottom: 1.7em;
+            }
+            form{
+                flex-direction: column;
+                height: unset;
+                margin-bottom: 1em;
+                input:nth-child(1) {
+                    padding-left: 1em;
+                    width: 100%;
+                    height: 4.5em;
+                }
+                input:nth-child(2) {
+                    width: 100%;
+                    height: 4.5em;
+                }
+            }
+        }
+    }
+    footer{
+        .links{
+            padding-left: 3em;
+            margin-bottom: 2em;
+        }
+    }
+}
